@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:sign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.krs.IsiKrsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="top"
+            android:id="@+id/scroolViewkrs">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#DFDBDB"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="270dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#DFDBDB"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnKembaliNilai"
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="200dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#D30D1E8F"
+                        android:drawableLeft="@drawable/ic_arrow_back"
+                        android:gravity="left"
+                        android:insetBottom="12dp"
+                        android:onClick="moveDashboardKRS"
+                        android:text="Kembali"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginTop="15sp"
+                        android:layout_marginRight="15sp"
+                        android:gravity="center"
+                        android:text="KARTU RENCANA STUDI (KRS)"
+                        android:textColor="#121111"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtNimKrs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="nim"
+                        android:textSize="5sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/txtNamaKrs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="nama"
+                        android:textSize="5sp"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginRight="16sp"
+                        android:layout_marginBottom="16sp"
+                        android:gravity="left"
+                        android:text="Isi Mata Kuliah yang akan diambil. Mohon untuk menyesuaikan batas maksimal SKS yang dapat diambil."
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18sp"
+                            android:layout_marginTop="10sp"
+                            android:text="Semester"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView56"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18sp"
+                            android:layout_marginTop="10sp"
+                            android:text="Prodi"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/spinnerKrs"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:entries="@array/semester" />
+
+
+                        <Spinner
+                            android:id="@+id/spProdiKrsmahasiswa"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:entries="@array/prodi" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left">
+
+                            <EditText
+                                android:id="@+id/ed_matkul1"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="180dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="#FFFFFF"
+                                android:gravity="left"
+                                android:hint="Mata Kuliah 1"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/ed_sks_matkul1"
+                                android:layout_width="160dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="16dp"
+                                android:backgroundTint="#FFFFFFFF"
+                                android:gravity="left"
+                                android:hint="Jumlah SKS"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left">
+
+                            <EditText
+                                android:id="@+id/ed_matkul2"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="180dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="#FFFFFF"
+                                android:gravity="left"
+                                android:hint="Mata Kuliah 2"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/ed_sks_matkul2"
+                                android:layout_width="160dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="16dp"
+                                android:backgroundTint="#FFFFFFFF"
+                                android:gravity="left"
+                                android:hint="Jumlah SKS"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left">
+
+                            <EditText
+                                android:id="@+id/ed_matkul3"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="180dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="#FFFFFF"
+                                android:gravity="left"
+                                android:hint="Mata Kuliah 3"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/ed_sks_matkul3"
+                                android:layout_width="160dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="16dp"
+                                android:backgroundTint="#FFFFFFFF"
+                                android:gravity="left"
+                                android:hint="Jumlah SKS"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left">
+
+                            <EditText
+                                android:id="@+id/ed_matkul4"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="180dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="#FFFFFF"
+                                android:gravity="left"
+                                android:hint="Mata Kuliah 4"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/ed_sks_matkul4"
+                                android:layout_width="160dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="16dp"
+                                android:backgroundTint="#FFFFFFFF"
+                                android:gravity="left"
+                                android:hint="Jumlah SKS"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left">
+
+                            <EditText
+                                android:id="@+id/ed_matkul5"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="180dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="#FFFFFF"
+                                android:gravity="left"
+                                android:hint="Mata Kuliah 5"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/ed_sks_matkul5"
+                                android:layout_width="160dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="16dp"
+                                android:backgroundTint="#FFFFFFFF"
+                                android:gravity="left"
+                                android:hint="Jumlah SKS"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left">
+
+                            <EditText
+                                android:id="@+id/ed_matkul6"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="180dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="#FFFFFF"
+                                android:gravity="left"
+                                android:hint="Mata Kuliah 6"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/ed_sks_matkul6"
+                                android:layout_width="160dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="16dp"
+                                android:backgroundTint="#FFFFFFFF"
+                                android:gravity="left"
+                                android:hint="Jumlah SKS"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left">
+
+                            <EditText
+                                android:id="@+id/ed_matkul7"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="180dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="#FFFFFF"
+                                android:gravity="left"
+                                android:hint="Mata Kuliah 7"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/ed_sks_matkul7"
+                                android:layout_width="160dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="16dp"
+                                android:backgroundTint="#FFFFFFFF"
+                                android:gravity="left"
+                                android:hint="Jumlah SKS"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left">
+
+                            <EditText
+                                android:id="@+id/ed_matkul8"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="180dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="#FFFFFF"
+                                android:gravity="left"
+                                android:hint="Mata Kuliah 8"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/ed_sks_matkul8"
+                                android:layout_width="160dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="16dp"
+                                android:backgroundTint="#FFFFFFFF"
+                                android:gravity="left"
+                                android:hint="Jumlah SKS"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginTop="18sp"
+                        android:layout_marginBottom="20sp"
+                        android:text="Mata Kuliah Yang Dibatalkan"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left">
+
+                            <EditText
+                                android:id="@+id/ed_batal_matkul1"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="180dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="#FFFFFF"
+                                android:gravity="left"
+                                android:hint="Mata Kuliah 1"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/ed_batalsks_matkul1"
+                                android:layout_width="160dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="16dp"
+                                android:backgroundTint="#FFFFFFFF"
+                                android:gravity="left"
+                                android:hint="Jumlah SKS"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left">
+
+                            <EditText
+                                android:id="@+id/ed_batal_matkul2"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="180dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="#FFFFFF"
+                                android:gravity="left"
+                                android:hint="Mata Kuliah 2"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/ed_batalsks_matkul2"
+                                android:layout_width="160dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="16dp"
+                                android:backgroundTint="#FFFFFFFF"
+                                android:gravity="left"
+                                android:hint="Jumlah SKS"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left">
+
+                            <EditText
+                                android:id="@+id/ed_batal_matkul3"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="180dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="#FFFFFF"
+                                android:gravity="left"
+                                android:hint="Mata Kuliah 3"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/ed_batalsks_matkul3"
+                                android:layout_width="160dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="16dp"
+                                android:backgroundTint="#FFFFFFFF"
+                                android:gravity="left"
+                                android:hint="Jumlah SKS"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginTop="18sp"
+                        android:layout_marginBottom="5sp"
+                        android:text="Total SKS yang diambil"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/ed_jumlah_sks"
+                            android:layout_width="160dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="16sp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="16sp"
+                            android:backgroundTint="#FFFFFFFF"
+                            android:gravity="left"
+                            android:hint="Jumlah SKS"
+                            android:inputType="textPersonName"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnRefreshsks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginBottom="24dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#D30D1E8F"
+                        android:gravity="center"
+                        android:onClick="RefreshSKS"
+                        android:text="Refresh"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:cornerRadius="20dp" />
+
+
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="16sp"-->
+<!--                        android:layout_marginTop="18sp"-->
+<!--                        android:layout_marginBottom="5sp"-->
+<!--                        android:text="Tanda Tangan :"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <com.kyanogen.signatureview.SignatureView-->
+<!--                        android:id="@+id/signatureViewKrs"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="200dp"-->
+<!--                        android:layout_margin="16dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        sign:backgroundColor="#FFF"-->
+<!--                        sign:enableSignature="true"-->
+<!--                        sign:penColor="#000"-->
+<!--                        sign:penSize="5dp" />-->
+
+<!--                    <Button-->
+<!--                        android:id="@+id/clear"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="Clear" />-->
+
+<!--                    <Button-->
+<!--                        android:id="@+id/saveSignature"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="Save Signature" />-->
+
+<!--                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnKirimKrs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="16dp"
+                        android:backgroundTint="#D30D1E8F"
+                        android:gravity="center"
+                        android:onClick="isiKRS"
+                        android:text="Kirim"
+                        android:textStyle="bold"
+                        app:cornerRadius="20dp" />
+
+                    <Button
+                        android:id="@+id/btnLihatKrsUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="16dp"
+                        android:backgroundTint="#D30D1E8F"
+                        android:gravity="center"
+                        android:onClick="moveToLihatKrs"
+                        android:text="Lihat"
+                        android:textStyle="bold"
+                        app:cornerRadius="20dp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

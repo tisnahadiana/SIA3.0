@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".user.menu.MenuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="#F1EEEE"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="200dp"
+                android:layout_weight="1"
+                android:foregroundGravity="left"
+                app:srcCompat="@drawable/ic_sia_blue" />
+
+            <Button
+                android:id="@+id/btnKeluar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="#D30D1E8F"
+                android:insetBottom="15dp"
+                android:text="Keluar"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="30dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#2196F3"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#2196F3"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ProfileImage"
+                            android:layout_width="186dp"
+                            android:layout_height="74dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="24dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_image_menu_circle_24" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:foregroundGravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtNamaMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24sp"
+                            android:layout_marginBottom="3sp"
+                            android:drawableLeft="@drawable/ic_account_nama_24"
+                            android:text="Nama"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtNimMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:drawableLeft="@drawable/ic_hourglass_full_24"
+                            android:text="NIM"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnUploadPhoto"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="46dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:drawableRight="@drawable/ic_edit_white"
+                            android:gravity="right"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/myDataLoaderProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:indeterminateBehavior="cycle"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:outlineProvider="paddedBounds">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FFFFFF"
+                        android:drawableRight="@drawable/ic_arrow_right_24"
+                        android:focusableInTouchMode="false"
+                        android:gravity="left"
+                        android:insetBottom="0dp"
+                        android:onClick="moveToisiKHS"
+                        android:outlineProvider="none"
+                        android:text="KHS"
+                        android:textColor="#000000"
+                        android:textColorHighlight="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:iconTint="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16sp"
+                        android:gravity="left"
+                        android:text="Kartu Hasil Studi" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/white"
+                android:drawableRight="@drawable/ic_arrow_right_24"
+                android:gravity="center|left"
+                android:onClick="moveToStruktur"
+                android:text="Struktur"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/white"
+                android:drawableRight="@drawable/ic_arrow_right_24"
+                android:gravity="center|left"
+                android:onClick="moveToMatkul"
+                android:text="Daftar Mata Kuliah"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/white"
+                android:drawableRight="@drawable/ic_arrow_right_24"
+                android:gravity="center|left"
+                android:onClick="moveToTnilai"
+                android:text="Transkrip Nilai"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/windowBackground"
+        android:foregroundGravity="bottom"
+        app:itemActiveIndicatorStyle="@drawable/bottom_navigation_selector2"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/bottom_navigation_selector"
+        app:itemTextAppearanceActive="@drawable/bottom_navigation_selector2"
+        app:itemTextColor="@drawable/bottom_navigation_selector"
+        app:itemTextAppearanceInactive="@drawable/bottom_navigation_selector2"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

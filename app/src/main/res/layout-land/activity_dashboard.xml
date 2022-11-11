@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="#2196F3"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".user.DashboardActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/progressBar4"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="50dp"
+                    android:progressTint="#0E0D0D" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:text="Hi"
+                        android:textColor="#ECE8E8"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtNamaDashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="150sp"
+                        android:layout_weight="1"
+                        android:autoText="true"
+                        android:rotationX="0"
+                        android:text="Nama"
+                        android:textColor="#ECE8E8"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btnHelpDashboard"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="7dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#2196F3"
+                        android:drawableRight="@drawable/ic_help_outline_24" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNimDashboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="NIM"
+                        android:textColor="#FDFCFC"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnMoveisikrs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#D30D1E8F"
+                        android:gravity="left"
+                        android:insetRight="2dp"
+                        android:insetBottom="18dp"
+                        android:onClick="moveToisiKrs"
+                        android:text="ISI KRS ->"
+                        android:textSize="9sp" />
+
+                    <Button
+                        android:id="@+id/btnMoveSenat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="175dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#D30D1E8F"
+                        android:gravity="left"
+                        android:insetRight="2dp"
+                        android:insetBottom="18dp"
+                        android:onClick="moveToSenat"
+                        android:text="SENAT FT>"
+                        android:textSize="9sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="306dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="100dp"
+                            android:background="#5BB6B4B4"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView16"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:text="FAKULTAS"
+                                android:textColor="#070707"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:id="@+id/textView17"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="TEKNIK"
+                                android:textColor="#151414"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtFirebase1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Mewujudkan sarjana dalam bidang teknik yang mampu menguasai dan menyelesaikan masalah dengan komputer dan berperan sebagai pembuat perangkat lunak komputer"
+                                android:textColor="#171616"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginRight="120dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="371dp"
+                            android:layout_height="87dp"
+                            android:layout_gravity="center"
+                            android:background="#3F51B5"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="10dp">
+
+                            <LinearLayout
+                                android:layout_width="371dp"
+                                android:layout_height="match_parent"
+                                android:background="#D30D1E8F"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:text="BERITA"
+                                    android:textColor="#F8F8F8"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="Kumpulan Berita terkini seputar fakultas teknik"
+                                    android:textColor="#E6E2E2" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <WebView
+                            android:id="@+id/webviewDashboard"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </WebView>
+
+                        <ProgressBar
+                            android:id="@+id/progressBar2"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@xml/loading" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/windowBackground"
+        android:foregroundGravity="bottom"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/bottom_navigation_selector"
+        app:itemTextColor="@drawable/bottom_navigation_selector"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

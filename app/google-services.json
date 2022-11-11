@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "45851456834",
+    "firebase_url": "https://sisteminformasiakademik-19fec-default-rtdb.firebaseio.com",
+    "project_id": "sisteminformasiakademik-19fec",
+    "storage_bucket": "sisteminformasiakademik-19fec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45851456834:android:a1283ac822640fd10384db",
+        "android_client_info": {
+          "package_name": "id.example.sisteminformasiakademik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45851456834-49844g63j70mebfimhnphjiso17lf8lk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-XcI25L7dKVxem3pUQeoofatZwT1FxT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45851456834-49844g63j70mebfimhnphjiso17lf8lk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

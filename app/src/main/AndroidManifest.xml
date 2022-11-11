@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.example.sisteminformasiakademik">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SistemInformasiAkademik">
+        <activity
+            android:name=".walidosen.krs.LihatKrsWalidosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.krs.LihatKrsUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".walidosen.tnilai.LihatTnilaiWalidosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".walidosen.khs.LihatKhsWalidosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".walidosen.tnilai.TnilaiWalidosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.krs.LihatKrsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.krs.HapusKrsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.krs.EditKrsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.krs.InputKrsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.tnilaiAdmin.LihatTnilaiAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.tnilaiAdmin.InputTnilaiAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.tnilaiAdmin.HapusTnilaiAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.tnilaiAdmin.EditTnilaiAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.khs.HapusKhsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.khs.EditKhsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.khs.LihatKhsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.khs.InputKhsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.matkul.LihatMatkulActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.matkul.HapusMatkulActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.matkul.InputMatkulActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.matkul.EditMatkulActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.walidosen.InputWalidosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.walidosen.HapusWalidosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.walidosen.EditWalidosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.walidosen.Lihat_data_walidosen"
+            android:exported="false" />
+        <activity
+            android:name=".admin.admin.HapusAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.admin.EditAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.admin.Lihat_data_admin"
+            android:exported="false" />
+        <activity
+            android:name=".admin.admin.InputAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.mahasiswa.HapusMahasiswaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.mahasiswa.EditMahasiswaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.mahasiswa.Lihat_data_mahasiswa"
+            android:exported="false" />
+        <activity
+            android:name=".admin.mahasiswa.InputMahasiswaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".walidosen.khs.KhsWalidosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".walidosen.krs.KrsWalidosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".walidosen.mahasiswa.UserMahasiswaWalidosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.tnilaiAdmin.TnilaiAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.matkul.MatkulAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.khs.KhsAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.krs.KrsAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.mahasiswa.UserMahasiswaAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.walidosen.UserWalidosenAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.admin.UserAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".walidosen.DashboardWalidosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.DashboardAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginWalidosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.HelpDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.menu.TNilaiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.matkul.MataKuliahActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.menu.StrukturActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.menu.KhsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.SenatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.krs.IsiKrsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.menu.MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
